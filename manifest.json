@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Amazon Killer",
+  "description": "Find the book you are looking at on Amazon in a parisian bookshop.",
+
+  "version": "0.1",
+
+  "background": {
+      "persistent": false,
+      "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+      "matches": ["*://*.amazon.fr/*", "*://*.amazon.com/*", "*://*.amazon.co.uk/*", "*://*.amazon.com.mx/*", "*://*.amazon.co.jp/*", "*://*.amazon.it/*", "*://*.amazon.in/*", "*://*.amazon.es/*", "*://*.amazon.cn/*", "*://*.amazon.ca/*", "*://*.amazon.com.br/*", "*://*.amazon.de/*", "*://*.amazon.com.au/*"],
+      "js":      ["jquery.js", "content.js"]
+  }],
+  "browser_action": {
+      "default_title": "Find a bookshop",
+      "default_icon": "icon.png"
+  },
+
+  "permissions": ["activeTab"],
+  
+  "icons": { "16": "icon.png",
+             "48": "icon.png",
+            "128": "icon.png" }
+
+}

@@ -7,5 +7,5 @@ L'extension récupère le numéro ISBN du livre que vous regardez et le cherche 
 
 Pour installer l'extension : https://chrome.google.com/webstore/detail/amazon-killer/jndbieelpiaihakdaflepdbamcllgobd
 
-Pour voir une démo : http://cl.ly/313g151J3635
+Pour voir une démo : https://www.youtube.com/watch?v=FZnEB1jMS3o
 

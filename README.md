@@ -1,7 +1,7 @@
 Amazon-Killer
 =============
 
-Extension Chrome pour chercher un livre sur Amazon et l'acheter dans une vraie librairie en France.
+Extension Chrome et firefox pour chercher un livre sur Amazon et l'acheter dans une vraie librairie en France.
 
 L'extension récupère le numéro ISBN du livre que vous regardez et le cherche dans la base à jour de "Place des Libraires".
 

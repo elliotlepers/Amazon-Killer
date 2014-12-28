@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Amazon Killer",
+  "description": "Cherchez un livre sur Amazon et trouvez-le dans une vraie librairie",
+
+  "version": "1",
+
+  "background": {
+      "persistent": false,
+      "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+      "matches": ["*://*.amazon.fr/*", "*://*.amazon.com/*", "*://*.amazon.co.uk/*", "*://*.amazon.com.mx/*", "*://*.amazon.co.jp/*", "*://*.amazon.it/*", "*://*.amazon.in/*", "*://*.amazon.es/*", "*://*.amazon.cn/*", "*://*.amazon.ca/*", "*://*.amazon.com.br/*", "*://*.amazon.de/*", "*://*.amazon.com.au/*"],
+      "js":      ["jquery.js", "content.js"]
+  }],
+  "browser_action": {
+      "default_title": "Find a bookshop",
+      "default_icon": "icon.png"
+  },
+
+  "web_accessible_resources": [
+    "images/*.png"
+  ],
+
+  "permissions": ["activeTab"],
+  
+  "icons": { "16": "icon.png",
+             "48": "icon.png",
+            "128": "icon.png" }
+
+}

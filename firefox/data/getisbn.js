@@ -7,7 +7,7 @@ self.port.on("getIsbn", function(iconStoreUrl) {
   		ISBN = ISBNElement.replace(/[^0-9]/g, '');
 		//On insert le bouton dans la page
 	  	var insertedButton = '<div class="a-button-stack">'+
-		    '<a href="http://www.placedeslibraires.fr/dlivre.php?gencod='+ISBN+'&rid=" target="_blank">'+
+		    '<a href="http://www.placedeslibraires.fr/detaillivre.php?gencod='+ISBN+'&rid=" target="_blank">'+
 		        '<span class="a-button a-spacing-small a-button-primary a-button-icon">'+
 		            '<span class="a-button-inner">'+
 		                '<i style="background-image:url('+iconStoreUrl+'); background-size:25px 25px; background-position: center;" class="a-icon a-icon-cart"></i>'+

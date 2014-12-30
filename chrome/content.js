@@ -4,7 +4,7 @@ var ISBN = $( ".content ul li:contains('ISBN-13')" ).text().split(':')[1].replac
 var iconURL = chrome.extension.getURL("images/icon-store.png");
 
 var button = '<div class="a-button-stack">'+
-    '<a href="http://www.placedeslibraires.fr/dlivre.php?gencod='+ISBN+'&rid=" target="_blank">'+
+    '<a href="http://www.placedeslibraires.fr/detaillivre.php?gencod='+ISBN+'&rid=" target="_blank">'+
         '<span class="a-button a-spacing-small a-button-primary a-button-icon">'+
             '<span class="a-button-inner">'+
                 '<i style="background-image:url('+iconURL+'); background-size:25px 25px; background-position: center;" class="a-icon a-icon-cart"></i>'+

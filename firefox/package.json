@@ -1,12 +1,15 @@
 {
+  "title": "Amazon-killer",
   "name": "amazon-killer",
-  "title": "Amazon Killer",
-  "id": "jid1-9r28lKAL8IjS1g",
+  "version": "0.0.1",
   "description": "Cherchez un livre sur Amazon et trouvez-le dans une vraie librairie",
-  "author": "Valentin Cavel - valentincavel@gmail.com",
-  "contributors": "Elliot Lepers",
+  "main": "index.js",
+  "author": "Valentin Cavel <valentin.cavel@gmail.com>",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
   "homepage": "https://github.com/elliotlepers/Amazon-Killer",
   "icon": "data/icon.png", 
-  "license": "MPL 2.0",
-  "version": "1"
+  "license": "MIT"
 }

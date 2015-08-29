@@ -7,6 +7,6 @@ pageMod.PageMod({
   include: "*.amazon.fr",
   contentScriptFile: [data.url("jquery.js"), data.url("getisbn.js")],
   onAttach: function(worker) {
-    worker.port.emit("getIsbn", data.url("icon-store.png"));
+    worker.port.emit("getIsbn", data.url("lalibrairie.png"), data.url("placedeslibraires.png"));
   }
 });

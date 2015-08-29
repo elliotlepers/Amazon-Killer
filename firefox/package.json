@@ -1,7 +1,7 @@
 {
   "title": "Amazon-killer",
   "name": "amazon-killer",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "Cherchez un livre sur Amazon et trouvez-le dans une vraie librairie",
   "main": "index.js",
   "author": "Valentin Cavel <valentin.cavel@gmail.com>",

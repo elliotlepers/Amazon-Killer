@@ -1,5 +1,6 @@
-Amazon-Killer
-=============
+# Amazon-Killer
+
+[![Donnez](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/elliotlepers/donate)
 
 Extension Chrome et Firefox pour chercher un livre sur Amazon et l'acheter dans une vraie librairie en France.
 

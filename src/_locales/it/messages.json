@@ -1,0 +1,16 @@
+{
+  "extensionName": {
+    "message": "Amazon Killer",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Estensione per Chrome e Firefox per trovare un libro su Amazon e acquistarlo in una vera libreria.",
+    "description": "Description of the extension."
+  },
+
+  "buttonText": {
+    "message": "Acquista in libreria",
+    "description": "Button text (on yellow / orange background)"
+  }
+}

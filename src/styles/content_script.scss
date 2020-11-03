@@ -1,0 +1,28 @@
+#buybox{
+  // > *{
+  //   display:none;
+  // }
+  .a-button-stack-local{
+    display: block!important;
+  }
+  .a-icon-local {
+    top: 2px;
+    left: 2px;
+    background: transparent!important;
+  }
+} 
+
+// TODO add more content
+#moreBuyingChoices_feature_div,
+#amazonClubSuggestionWidget_feature_div,
+#deliveryBlock_feature_div,
+#buybox #merchant-info,
+#formats .tmm-olp-links,
+#pBookUpsell_feature_div,
+#tmmSwatches,
+#tell-a-friend-byline,
+#availability,
+#selectQuantity,
+#fast-track{
+  display: none !important;
+}

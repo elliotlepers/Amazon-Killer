@@ -1,0 +1,14 @@
+/node_modules
+/*.log
+/dist
+/dist-zip
+/docs/docs.css
+/docs/docs.js
+web-ext-artifacts
+
+*.map
+.DS_Store
+*.code-workspace
+test/__screenshots
+.env
+

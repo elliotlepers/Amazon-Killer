@@ -20,7 +20,7 @@ const manifestInput = {
   homepage_url: 'https://github.com/lowwebtech/webextension-starter',
   short_name: 'amazon-killer',
 
-  permissions: ['storage', 'tabs', 'webNavigation', 'webRequest', 'webRequestBlocking', '<all_urls>'],
+  permissions: [],
   content_security_policy: csp,
 
   '__chrome|firefox__author': 'lowwebtech',

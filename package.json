@@ -20,7 +20,7 @@
     "build:opera": "cross-env NODE_ENV=production TARGET_BROWSER=opera webpack --mode=production --hide-modules",
     "build:report": "webpack-bundle-analyzer --port 4200 dist/chrome/stats.json",
     "watch:nohmr": "npm run build -- --watch",
-    "release": "run-s build test build:zip release:chrome release:firefox",
+    "release": "run-s build release:chrome release:firefox",
     "release:firefox": "web-ext-submit --source-dir dist/firefox",
     "release:chrome": "webstore upload --source=dist/chrome --auto-publish"
   },

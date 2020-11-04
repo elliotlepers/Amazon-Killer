@@ -14,45 +14,76 @@ function start() {
   console.log('language', language);
   console.log('ISBN', ISBN);
   if (ISBN && language) {
-    const buttonEl = document.createElement('div');
-    buttonEl.classList.add('a-button-stack', 'a-button-stack-local');
-
     const urlsLang = getUrls();
     const randomUrl = urlsLang[parseInt(urlsLang.length * Math.random())];
     const url = formatUrl(randomUrl.url);
     const text = browser.i18n.getMessage('buttonText');
     const icon = browser.runtime.getURL('images/icon-store.png');
 
-    let buttons = `
-      <a href="${url}" style="display:block; line-height:30px">
-        <span class="a-button a-spacing-small a-button-primary a-button-icon">
-          <span class="a-button-inner">
-            <i class="a-icon a-icon-local"><img src="${icon}" /></i>
-            ${text}
-          </span>
-        </span>
-      </a>
-    `;
+    const localElement = document.createElement('div');
+    localElement.classList.add('a-button-stack', 'a-button-stack-local');
+    const linkButton = document.createElement('a');
+    linkButton.style.display = 'block';
+    linkButton.style.lineHeight = '30px';
+    linkButton.href = url;
+    localElement.append(linkButton);
 
-    console.log(urlsLang);
+    const abutton = document.createElement('span');
+    abutton.classList.add('a-button', 'a-spacing-small', 'a-button-primary', 'a-button-icon');
+    linkButton.append(abutton);
+
+    const abuttonInner = document.createElement('span');
+    abuttonInner.classList.add('a-button-inner');
+    abutton.append(abuttonInner);
+
+    const i = document.createElement('i')
+    i.classList.add('a-icon', 'a-icon-local');
+    abuttonInner.append(i);
+
+    const img = document.createElement('img');
+    img.src = icon;
+    i.append(img);
+
+    const span = document.createElement('span');
+    span.innerText = text;
+    abuttonInner.append(span);
+
+    //   let buttons = `
+    //   <a href="${url}" style="display:block; line-height:30px">
+    //     <span class="a-button a-spacing-small a-button-primary a-button-icon">
+    //       <span class="a-button-inner">
+    //         <i class="a-icon a-icon-local"><img src="${icon}" /></i>
+    //         ${text}
+    //       </span>
+    //     </span>
+    //   </a>
+    // `;
+    // buttonEl.innerHTML = buttons;
+
+    const links = document.createElement('div');
     for (let i = 0, lg = urlsLang.length; i < lg; i++) {
       const link = urlsLang[i];
-      buttons += getLink(link);
+      const a = document.createElement('a');
+      a.href = formatUrl(link.url);
+      a.innerText = link.name;
+      links.append(a);
+      const br = document.createElement('br');
+      links.append(br);
     }
+    localElement.append(links);
 
-    buttonEl.innerHTML = buttons;
-
-    const container = document.querySelector('#buybox .a-box-inner');
     // const container = document.querySelector('#rightCol .a-button-stack').parentNode;
     // const container = document.querySelector('#bbopAndCartBox');
-    container.innerHTML = '';
-    container.append(buttonEl);
+    const container = document.querySelector('#buybox .a-box-inner');
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
+    }
+    container.append(localElement);
   }
 }
 
 function getLanguage() {
   const hrefLang = document.documentElement.lang;
-  console.log(hrefLang);
 
   for (let i = 0, lg = supportedLanguages.length; i < lg; i++) {
     if (hrefLang.indexOf(supportedLanguages[i]) !== -1) {
@@ -75,18 +106,11 @@ function getISBN() {
 function getUrls() {
   const urlsLang = [];
   for (let i = 0, lg = urls.length; i < lg; i++) {
-    // console.log(urls[i].lang, urls[i].lang.indexOf(language));
     if (urls[i].lang.indexOf(language) !== -1) {
-      // console.log(urls[i]);
       urlsLang.push(urls[i]);
     }
   }
-  // console.log(urlsLang);
   return urlsLang;
-}
-
-function getLink(link) {
-  return `<a href="${formatUrl(link.url)}">${link.name}</a><br>`;
 }
 
 function formatUrl(url) {

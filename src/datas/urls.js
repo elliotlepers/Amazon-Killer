@@ -9,7 +9,6 @@ export function getSupportedLanguages() {
     supportedLanguages = supportedLanguages.concat(urls[i].lang);
   }
   supportedLanguages = arrayUnique(supportedLanguages);
-  console.log(supportedLanguages);
   return supportedLanguages;
 }
 

@@ -14,7 +14,7 @@
     "dev:chrome": "cross-env HMR=true NODE_ENV=development TARGET_BROWSER=chrome webpack --watch --mode=development --hide-modules",
     "dev:firefox": "cross-env HMR=true NODE_ENV=development TARGET_BROWSER=firefox webpack --watch --mode=development --hide-modules",
     "dev:opera": "cross-env HMR=true NODE_ENV=development TARGET_BROWSER=opera webpack --watch --mode=development --hide-modules",
-    "build": "run-s build:chrome build:firefox build:opera",
+    "build": "run-s fix build:chrome build:firefox build:opera",
     "build:chrome": "cross-env NODE_ENV=production TARGET_BROWSER=chrome webpack --mode=production --hide-modules",
     "build:firefox": "cross-env NODE_ENV=production TARGET_BROWSER=firefox webpack --mode=production --hide-modules",
     "build:opera": "cross-env NODE_ENV=production TARGET_BROWSER=opera webpack --mode=production --hide-modules",

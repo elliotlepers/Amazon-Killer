@@ -36,7 +36,7 @@ function start() {
     abuttonInner.classList.add('a-button-inner');
     abutton.append(abuttonInner);
 
-    const i = document.createElement('i')
+    const i = document.createElement('i');
     i.classList.add('a-icon', 'a-icon-local');
     abuttonInner.append(i);
 

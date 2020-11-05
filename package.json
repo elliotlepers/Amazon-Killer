@@ -9,7 +9,7 @@
     "lint:fix": "eslint --ext .js src --fix",
     "prettier": "prettier \"src/**/*.{js}\"",
     "prettier:fix": "npm run prettier -- --write",
-    "fix": "run-s lint:fix prettier:fix",
+    "fix": "run-s lint:fix",
     "start": "run-s build:chrome dev:chrome",
     "dev:chrome": "cross-env HMR=true NODE_ENV=development TARGET_BROWSER=chrome webpack --watch --mode=development --hide-modules",
     "dev:firefox": "cross-env HMR=true NODE_ENV=development TARGET_BROWSER=firefox webpack --watch --mode=development --hide-modules",

@@ -9,7 +9,6 @@ export function getSupportedLanguages() {
     supportedLanguages = supportedLanguages.concat(urls[i].lang);
   }
   supportedLanguages = arrayUnique(supportedLanguages);
-  console.log(supportedLanguages);
   return supportedLanguages;
 }
 
@@ -39,6 +38,11 @@ export const urls = [
     lang: ['fr-fr'],
     name: 'decitre.fr',
     url: 'https://www.decitre.fr/livres/##ISBN##.html',
+  },
+  {
+    lang: ['fr-fr'],
+    name: 'recyclivre.com',
+    url: 'https://www.recyclivre.com/shop/recherche?s=##ISBN##',
   },
   {
     lang: ['fr-fr'],
@@ -124,6 +128,21 @@ export const urls = [
     featured: true,
     url: 'https://www.penguinrandomhouse.ca/canadian-independent-bookstores-delivery',
   },
+  {
+    lang: ['fr-ca'],
+    name: 'leslibraires.ca',
+    url: 'https://www.leslibraires.ca/recherche/?s=##ISBN##',
+  },
+  {
+    lang: ['en-ca', 'fr-ca'],
+    name: 'archambault.ca',
+    url: 'https://www.archambault.ca/Pages/Recherche?q=##ISBN##',
+  },
+  {
+    lang: ['fr-ca'],
+    name: 'renaud-bray.com',
+    url: 'https://www.renaud-bray.com/Recherche.aspx?words=##ISBN##',
+  },
 
   // ES //////////////////
   {
@@ -147,6 +166,55 @@ export const urls = [
     lang: ['it-it'],
     name: 'hoepli.it',
     url: 'https://www.hoepli.it/cerca/libri.aspx?query=##ISBN##',
+  },
+
+  // DE //////////////////
+  {
+    lang: ['de-de'],
+    name: 'genialokal.de',
+    url: 'https://www.genialokal.de/Suche/?q=##ISBN##',
+  },
+  {
+    lang: ['de-de'],
+    name: 'ecobookstore.de',
+    url: 'https://www.ecobookstore.de/shop/quickSearch?searchString=##ISBN##',
+  },
+  {
+    lang: ['de-de'],
+    name: 'deutsche-buchhandlung.de',
+    url: 'https://www.deutsche-buchhandlung.de/details/##ISBN##',
+  },
+  {
+    lang: ['de-de'],
+    name: 'buch7.de',
+    url: 'https://www.buch7.de/suche?search=##ISBN##',
+  },
+  {
+    lang: ['de-de'],
+    name: 'morawa.at',
+    url: 'https://www.morawa.at/detail/ISBN-##ISBN##',
+  },
+
+  // NL //////////////////
+  {
+    lang: ['nl-nl', 'nl-be'],
+    name: 'libris.nl',
+    url: 'https://www.libris.nl/zoek/?q=##ISBN##',
+  },
+  {
+    lang: ['nl-nl', 'nl-be'],
+    name: 'bruna.nl',
+    url: 'https://www.bruna.nl/search?location=searchtext=##ISBN##',
+  },
+  {
+    lang: ['nl-nl', 'nl-be'],
+    name: 'standaardboekhandel.be',
+    url: 'https://www.standaardboekhandel.be/p/##ISBN##',
+  },
+  {
+    lang: ['nl-nl', 'nl-be'],
+    name: 'donner.nl',
+    url: 'https://www.donner.nl/##ISBN##',
   },
 ];
 

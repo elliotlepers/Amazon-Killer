@@ -41,6 +41,11 @@ export const urls = [
   },
   {
     lang: ['fr-fr'],
+    name: 'recyclivre.com',
+    url: 'https://www.recyclivre.com/shop/recherche?s=##ISBN##',
+  },
+  {
+    lang: ['fr-fr'],
     name: 'librairies-nouvelleaquitaine.com',
     url: 'https://www.librairies-nouvelleaquitaine.com/livre/##ISBN##/',
   },

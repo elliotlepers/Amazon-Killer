@@ -1,5 +1,6 @@
-Amazon-Killer
-=============
+# Amazon-Killer
+
+[![Donnez](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/elliotlepers/donate)
 
 Extension Chrome et Firefox pour chercher un livre sur Amazon et l'acheter dans une vraie librairie.
 L'extension récupère le numéro ISBN du livre que vous regardez et le cherche dans plusieurs bases de données de librairies indépendantes.

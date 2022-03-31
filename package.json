@@ -34,7 +34,7 @@
     "content-scripts-register-polyfill": "^1.0.5",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "node-png": "^0.4.3",
     "path": "^0.12.7",
     "query-string": "^6.13.4",
